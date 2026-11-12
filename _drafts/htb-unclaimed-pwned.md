@@ -57,13 +57,13 @@ Until then, I will not publish hints, commands, credentials, flags, screenshots 
 
 ## Notify me when it is released
 
-<!-- TODO: Replace FORM_ENDPOINT after connecting the chosen free email-form provider. -->
-<form action="FORM_ENDPOINT" method="POST">
+<form action="https://formspree.io/f/mrpqgrky" method="POST">
   <label for="unclaimed-email">Email address</label><br>
   <input id="unclaimed-email" name="email" type="email" autocomplete="email" required>
   <input name="article" type="hidden" value="HTB Unclaimed walkthrough">
+  <input name="_subject" type="hidden" value="Unclaimed walkthrough notification signup">
   <button type="submit">Notify me</button>
 </form>
 
-No walkthrough details will be sent or published before the machine officially retires.
+Your email address will be used only to notify you when the detailed walkthrough is released. No walkthrough details will be sent or published before the machine officially retires.
 
