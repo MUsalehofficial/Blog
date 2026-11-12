@@ -119,7 +119,7 @@ Until then, I will not publish hints, commands, credentials, flags, screenshots 
     flex: 1 1 19rem;
   }
 
-  .release-notice__field span {
+  .release-notice__icon {
     position: absolute;
     top: 50%;
     left: 1rem;
@@ -127,6 +127,18 @@ Until then, I will not publish hints, commands, credentials, flags, screenshots 
     color: #7f90aa;
     font-size: 1.05rem;
     pointer-events: none;
+  }
+
+  .release-notice__sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
   .release-notice input[type="email"] {
@@ -205,11 +217,11 @@ Until then, I will not publish hints, commands, credentials, flags, screenshots 
     Join the notification list and receive one email when the detailed Unclaimed walkthrough is published after official retirement.
   </p>
   <form class="release-notice__form" action="https://formspree.io/f/mrpqgrky" method="POST">
-    <label class="release-notice__field" for="unclaimed-email">
-      <span aria-hidden="true">✉</span>
-      <span class="visually-hidden">Email address</span>
+    <div class="release-notice__field">
+      <label class="release-notice__sr-only" for="unclaimed-email">Email address</label>
+      <span class="release-notice__icon" aria-hidden="true">✉</span>
       <input id="unclaimed-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
-    </label>
+    </div>
     <input name="article" type="hidden" value="HTB Unclaimed walkthrough">
     <input name="_subject" type="hidden" value="Unclaimed walkthrough notification signup">
     <button type="submit">Notify me <span aria-hidden="true">→</span></button>
