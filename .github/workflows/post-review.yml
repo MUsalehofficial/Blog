@@ -1,0 +1,39 @@
+name: "Review Blog Post"
+
+on:
+  pull_request:
+    paths:
+      - "_drafts/**"
+      - "_posts/**"
+      - "assets/img/posts/**"
+      - "_templates/**"
+      - "Gemfile"
+      - "Gemfile.lock"
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.4
+          bundler-cache: true
+
+      - name: Build site with drafts
+        run: bundle exec jekyll build --drafts
+        env:
+          JEKYLL_ENV: production
+
+      - name: Test generated site
+        run: |
+          bundle exec htmlproofer _site \
+            --disable-external \
+            --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
