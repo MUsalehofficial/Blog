@@ -17,11 +17,8 @@ title: "Muhammad Saleh"
 tagline: "Cybersecurity | Infrastructure | Cloud & DevOps"
 
 description: >-
-  Explore technical articles, Hack The Box (HTB) walkthroughs,
-  penetration testing, cybersecurity, Windows and Linux administration,
-  enterprise infrastructure, cloud computing, AWS, virtualization,
-  automation, and DevOps. Practical guides, real-world troubleshooting,
-  and hands-on technical insights by Muhammad Saleh.
+  Practical guides on cybersecurity, HTB, Windows and Linux administration,
+  cloud infrastructure, AWS, virtualization, automation, and DevOps.
 
 url: "https://blog.musalehofficial.com"
 baseurl: ""
@@ -42,18 +39,21 @@ social:
   fediverse_handle:
   links:
     - https://github.com/MUsalehofficial
-  # Add your actual social URLs here, for example:
-  # links:
-  #   - https://github.com/YOUR_USERNAME
-  #   - https://www.linkedin.com/in/YOUR_PROFILE
+    - https://twitter.com/MUsalehofficial
+  # Add additional public profile URLs to this list when needed.
+
+author:
+  name: "Muhammad Saleh"
+  url: "https://blog.musalehofficial.com/about/"
+  twitter: "MUsalehofficial"
 
 # ==========================================
 # SEARCH ENGINE VERIFICATION
 # ==========================================
 
 webmaster_verifications:
-  google: ""
-  bing: ""
+  google:
+  bing:
   alexa:
   yandex:
   baidu:
@@ -94,7 +94,7 @@ avatar: "" # Add an image later, e.g. /assets/img/avatar.png
 
 # Default Open Graph image for shared links.
 # Upload this image before enabling the setting.
-social_preview_image: ""
+social_preview_image: "/assets/img/site/social-preview.png"
 
 toc: true
 

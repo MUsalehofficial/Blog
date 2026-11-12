@@ -5,7 +5,9 @@ on:
     paths:
       - "_drafts/**"
       - "_posts/**"
+      - "_config.yml"
       - "assets/img/posts/**"
+      - "assets/img/site/**"
       - "_templates/**"
       - "Gemfile"
       - "Gemfile.lock"
