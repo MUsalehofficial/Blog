@@ -31,14 +31,14 @@ baseurl: ""
 # ==========================================
 
 github:
-  username: "" # Add your GitHub username
+  username: "MUsalehofficial" # Add your GitHub username
 
 twitter:
-  username: "" # Optional: X username
+  username: "MUsalehofficial" # Optional: X username
 
 social:
   name: "Muhammad Saleh"
-  email: "" # Optional: public email
+  email: "hi@musalehofficial.com" # Optional: public email
   fediverse_handle:
   links: []
   # Add your actual social URLs here, for example:
