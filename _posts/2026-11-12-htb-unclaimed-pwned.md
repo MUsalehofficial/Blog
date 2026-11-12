@@ -129,18 +129,6 @@ Until then, I will not publish hints, commands, credentials, flags, screenshots 
     pointer-events: none;
   }
 
-  .release-notice__sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-
   .release-notice input[type="email"] {
     width: 100%;
     min-height: 3.25rem;
@@ -218,9 +206,8 @@ Until then, I will not publish hints, commands, credentials, flags, screenshots 
   </p>
   <form class="release-notice__form" action="https://formspree.io/f/mrpqgrky" method="POST">
     <div class="release-notice__field">
-      <label class="release-notice__sr-only" for="unclaimed-email">Email address</label>
       <span class="release-notice__icon" aria-hidden="true">✉</span>
-      <input id="unclaimed-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+      <input id="unclaimed-email" name="email" type="email" autocomplete="email" inputmode="email" aria-label="Email address" placeholder="you@example.com" required>
     </div>
     <input name="article" type="hidden" value="HTB Unclaimed walkthrough">
     <input name="_subject" type="hidden" value="Unclaimed walkthrough notification signup">
