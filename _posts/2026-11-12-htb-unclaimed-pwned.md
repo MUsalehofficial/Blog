@@ -57,13 +57,166 @@ Until then, I will not publish hints, commands, credentials, flags, screenshots 
 
 ## Notify me when it is released
 
-<form action="https://formspree.io/f/mrpqgrky" method="POST">
-  <label for="unclaimed-email">Email address</label><br>
-  <input id="unclaimed-email" name="email" type="email" autocomplete="email" required>
-  <input name="article" type="hidden" value="HTB Unclaimed walkthrough">
-  <input name="_subject" type="hidden" value="Unclaimed walkthrough notification signup">
-  <button type="submit">Notify me</button>
-</form>
+<style>
+  .release-notice {
+    position: relative;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    padding: clamp(1.4rem, 4vw, 2.2rem);
+    border: 1px solid rgba(72, 149, 239, 0.3);
+    border-radius: 1.25rem;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(72, 149, 239, 0.18), transparent 42%),
+      linear-gradient(145deg, #151f2f 0%, #101722 100%);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.24);
+  }
 
-Your email address will be used only to notify you when the detailed walkthrough is released. No walkthrough details will be sent or published before the machine officially retires.
+  .release-notice::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: linear-gradient(#4cc9f0, #4895ef);
+  }
+
+  .release-notice__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+    padding: 0.35rem 0.7rem;
+    border: 1px solid rgba(76, 201, 240, 0.35);
+    border-radius: 999px;
+    color: #8be1f7;
+    background: rgba(76, 201, 240, 0.08);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .release-notice h3 {
+    margin: 0 0 0.55rem;
+    color: #f7f9fc;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+  }
+
+  .release-notice__intro {
+    max-width: 44rem;
+    margin: 0 0 1.25rem;
+    color: #b8c5d8;
+    line-height: 1.65;
+  }
+
+  .release-notice__form {
+    display: flex;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .release-notice__field {
+    position: relative;
+    flex: 1 1 19rem;
+  }
+
+  .release-notice__field span {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: #7f90aa;
+    font-size: 1.05rem;
+    pointer-events: none;
+  }
+
+  .release-notice input[type="email"] {
+    width: 100%;
+    min-height: 3.25rem;
+    padding: 0.75rem 1rem 0.75rem 2.8rem;
+    border: 1px solid #33445c;
+    border-radius: 0.8rem;
+    color: #f7f9fc;
+    background: rgba(8, 13, 21, 0.72);
+    outline: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .release-notice input[type="email"]::placeholder {
+    color: #7f90aa;
+  }
+
+  .release-notice input[type="email"]:focus {
+    border-color: #4cc9f0;
+    box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.16);
+  }
+
+  .release-notice button {
+    min-height: 3.25rem;
+    padding: 0.75rem 1.25rem;
+    border: 0;
+    border-radius: 0.8rem;
+    color: #071019;
+    background: linear-gradient(135deg, #4cc9f0, #5aa2ff);
+    box-shadow: 0 9px 24px rgba(72, 149, 239, 0.25);
+    font-weight: 800;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+  }
+
+  .release-notice button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 13px 28px rgba(72, 149, 239, 0.36);
+  }
+
+  .release-notice button:focus-visible {
+    outline: 3px solid rgba(139, 225, 247, 0.65);
+    outline-offset: 3px;
+  }
+
+  .release-notice__privacy {
+    display: flex;
+    gap: 0.45rem;
+    margin: 0.85rem 0 0;
+    color: #8f9eb3;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 640px) {
+    .release-notice__form {
+      flex-direction: column;
+    }
+
+    .release-notice__field {
+      flex-basis: auto;
+    }
+
+    .release-notice button {
+      width: 100%;
+    }
+  }
+</style>
+
+<aside class="release-notice" aria-labelledby="release-notice-title">
+  <div class="release-notice__badge">Release alert</div>
+  <h3 id="release-notice-title">Get the walkthrough when it drops</h3>
+  <p class="release-notice__intro">
+    Join the notification list and receive one email when the detailed Unclaimed walkthrough is published after official retirement.
+  </p>
+  <form class="release-notice__form" action="https://formspree.io/f/mrpqgrky" method="POST">
+    <label class="release-notice__field" for="unclaimed-email">
+      <span aria-hidden="true">✉</span>
+      <span class="visually-hidden">Email address</span>
+      <input id="unclaimed-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+    </label>
+    <input name="article" type="hidden" value="HTB Unclaimed walkthrough">
+    <input name="_subject" type="hidden" value="Unclaimed walkthrough notification signup">
+    <button type="submit">Notify me <span aria-hidden="true">→</span></button>
+  </form>
+  <p class="release-notice__privacy">
+    <span aria-hidden="true">🔒</span>
+    <span>One release notification only. No spam, and no walkthrough details before official retirement.</span>
+  </p>
+</aside>
 
