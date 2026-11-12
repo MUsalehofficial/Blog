@@ -38,9 +38,10 @@ twitter:
 
 social:
   name: "Muhammad Saleh"
-  email: "hi@musalehofficial.com" # Optional: public email
+  email: "hi@musalehofficial.com"
   fediverse_handle:
-  links: []
+  links:
+    - https://github.com/MUsalehofficial
   # Add your actual social URLs here, for example:
   # links:
   #   - https://github.com/YOUR_USERNAME
